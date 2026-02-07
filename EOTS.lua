@@ -68,10 +68,10 @@ local kt = killBtn:CreateFontString(nil, "OVERLAY", "GameFontNormal"); kt:SetPoi
 killBtn:SetHighlightTexture("Interface\\Buttons\\UI-Listbox-Highlight"); killBtn:SetScript("OnClick", function() SendEOTSAnnounce("KILL") end)
 
 local ABG_EOTSCoords = {
-    ["fel orc village"] = { x = -26, y = -17,  name = "ORC - " },
-    ["blood elf tower"] = { x = 24,  y = -14,  name = "BE - " },
-    ["draenei ruins"]   = { x = 20, y = 19, name = "DR - " },
-    ["mage tower"]      = { x = -29,  y = 17, name = "MT - " },
+    ["fel orc village"] = { x = -26, y = -17,  name = "FR" },
+    ["blood elf tower"] = { x = 24,  y = -14,  name = "BE" },
+    ["draenei ruins"]   = { x = 20, y = 19, name = "DR" },
+    ["mage tower"]      = { x = -29,  y = 17, name = "MT" },
     ["flag center"]     = { x = -1, y = 0, name = "CENTER" }, 
 }
 
@@ -113,3 +113,4 @@ C_Timer.After(2, UpdateEOTSZones)
 ABG_EOTSMenu:SetScript("OnUpdate", function(self)
     if not self:IsMouseOver() and (IsMouseButtonDown("LeftButton") or IsMouseButtonDown("RightButton")) then self:Hide() end
 end)
+
