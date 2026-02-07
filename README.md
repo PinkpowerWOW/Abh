@@ -5,6 +5,6 @@
 - Клик на неё и выбрать Download ZIP / Click on it and select Download ZIP.
 - После распаковать в папку игры \Interface\AddOns\ и переименовать в Abh / After unzip it to the game folder \Interface\AddOns\ and rename it to Abh.
 
-![Example Image](10.png) ![Example Image](11.png)
-![Example Image](12.png) ![Example Image](13.png)
-
+![Example Image](pics/10.png) ![Example Image](pics/11.png)
+![Example Image](pics/12.png) ![Example Image](pics/13.png) ![Example Image](pics/14.png)
+![Example Image](pics/15.png) ![Example Image](pics/16.png) ![Example Image](pics/17.png)
