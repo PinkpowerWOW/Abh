@@ -1,0 +1,10 @@
+## Interface: 30300
+## Title: [|cffFFFF00AB|r|cffFF4500H|r] by |cfff48cbaPinkpower|r
+## Notes: Ascension BG Helper. Author: |cfff48cbaPinkpower|r.
+## SavedVariables: ABG_Settings
+
+Abh.lua
+Arathi.lua
+Warsong.lua
+TwinPeaks.lua
+EOTS.lua
