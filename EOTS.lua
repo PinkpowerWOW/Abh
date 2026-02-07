@@ -22,13 +22,13 @@ local function SendEOTSAnnounce(msgType, count)
     if msgType == "INC" then
         msg = tag .. "INC " .. count .. " " .. node
     elseif msgType == "DEFF" then
-        msg = tag .. node .. " GUARD NEEDED!"
+        msg = tag .. node .. " - GUARD NEEDED!"
     elseif msgType == "ATTACK" then
-        msg = tag .. node .. " ATTACK!"
+        msg = tag .. node .. " - ATTACK!"
     elseif msgType == "OMW" then
-        msg = tag .. node .. " I'M ON MY WAY!"
+        msg = tag .. node .. " - I'M ON MY WAY!"
     elseif msgType == "IAMDEFF" then
-        msg = tag .. node .. " I AM DEFENDING THE POINT."
+        msg = tag .. node .. " - I AM DEFENDING THE POINT."
     elseif msgType == "KILL" then
         msg = tag .. "KILL ALL IN CENTER! I'M CAP THE FLAG!"
     end
@@ -113,4 +113,5 @@ C_Timer.After(2, UpdateEOTSZones)
 ABG_EOTSMenu:SetScript("OnUpdate", function(self)
     if not self:IsMouseOver() and (IsMouseButtonDown("LeftButton") or IsMouseButtonDown("RightButton")) then self:Hide() end
 end)
+
 
