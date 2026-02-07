@@ -2,8 +2,8 @@ local frame = AscensionBGMapFrame
 local activeTPNode = nil
 
 local ABG_TPCoords = {
-    ["alliance"] = { x = 32, y = 61,  name = "ALLIANCE BASE - " },
-    ["horde"]    = { x = -1,  y = -63, name = "HORDE BASE - " },
+    ["alliance"] = { x = 32, y = 61,  name = "ALLIANCE BASE" },
+    ["horde"]    = { x = -1,  y = -63, name = "HORDE BASE" },
 }
 
 local ABG_TPMenu = CreateFrame("Frame", "ABG_TPContextMenu", UIParent)
@@ -21,16 +21,16 @@ ABG_TPMenu:Hide()
 local function SendTPAnnounce(msgType, count)
     local msg = ""
     local tag = "[ABH] "
-    
+
     if msgType == "TAKE" then
         msg = tag .. "I'LL TAKE THE FLAG!"
     elseif not activeTPNode then return 
     elseif msgType == "INC" then
         msg = tag .. "INC " .. count .. " " .. activeTPNode:upper()
     elseif msgType == "DEFF" then
-        msg = tag .. activeTPNode:upper() .. " GUARD NEEDED!"
+        msg = tag .. activeTPNode:upper() .. " - GUARD NEEDED!"
     elseif msgType == "ATTACK" then
-        msg = tag .. activeTPNode:upper() .. " ATTACK!"
+        msg = tag .. activeTPNode:upper() .. " - ATTACK!"
     end
     
     local chatType = (select(2, GetInstanceInfo()) == "pvp") and "BATTLEGROUND" or "SAY"
@@ -102,3 +102,4 @@ C_Timer.After(2, UpdateTPZones)
 ABG_TPMenu:SetScript("OnUpdate", function(self)
     if not self:IsMouseOver() and (IsMouseButtonDown("LeftButton") or IsMouseButtonDown("RightButton")) then self:Hide() end
 end)
+
